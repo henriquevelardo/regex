@@ -8,7 +8,29 @@
     while(resultado = regex.exec(target)) {
         console.log(resultado)
     }
+
+    //Substitui HÍFEN por BARRA
+    var anoMesDia = "2007-12-31";
+    var regex = /-/g;
+    var resultado2 = regex.exec(target)
     
+    anoMesDia = anoMesDia.replace(regex, "/")
+
+    console.log(anoMesDia)
+
+    //Dividindo arquivo split
+
+    var arquivo = '100,200-150,200;20';
+    
+    var exp = /[,;-]/;
+    var valores = arquivo.split(exp);
+    console.log(valores)
+
+    //Extraindo um padrão
+    var codigos = 'A121B12112C12212F12G01';
+    var exp1 = /[A-Za-z]\d+/g
+    var codigosExtraidos = codigos.match(exp1);
+    console.log(codigosExtraidos)
 
 </script>
 
